@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% block content %}
+<html lang="en" dir="ltr">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap4/css/bootstrap.min.css' %}">
+<style>
+  .jumbotron{
+    margin-bottom: 0px;
+  }
+  h2{
+    font-family:serif;
+  }
+  p{
+    font-family: fantasy;
+  }
+</style>
+<body>
+<br>
+<section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center">
+  <div class="container text-center">
+    <h2 class="display-3 text-info">Adiran IAS Academy</h2>
+    <p class="display-3 d-none d-sm-block">Attend Your Classes Online</p>
+    <p class="lead">Sign Up Now >> To Chase Your Dream</p>
+
+  
+    <p><strong> Start Your Journey Here:</strong></p>
+    <a href="/student_app/studentclick" class="btn btn-lg btn-info" style="padding-right: 35px; border-radius: 0%;"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Start >></a><br>
+    
+    
+    <br><br><br>
+  </div>  
+</section>
+</body>
+
+</html>
+{% endblock content %}

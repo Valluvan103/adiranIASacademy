@@ -1,0 +1,61 @@
+{% extends 'adminbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+{%load static%}
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap4/css/bootstrap.min.css' %}">
+  
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+  </style>
+</head>
+<br><br>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <center><h1 class="bg-dark text-light">Courses</h1></center>
+    </div>
+    <table class="table table-hover table-bordered" id="dev-table">
+      <thead>
+        <tr>
+
+          <th>Course</th>
+          
+          <th>View</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      {% for t in courses %}
+      <tr>
+
+        <td> {{t.course_name}}</td>
+        
+        
+        <td><a class="btn btn-success btn-xs" style="border-radius: 0%;" href="{% url 'admin_view_course' t.id %}"><span class="glyphicon glyphicon-edit">view</span></a>
+          
+          </td>
+          <td><a class="btn btn-success btn-xs" style="border-radius: 0%;" href="{% url 'update_course' t.id  %}"><span class="glyphicon glyphicon-edit">update</span></a>
+          <a class="btn btn-danger btn-xs" style="border-radius: 0%;" href="{% url 'delete_course' t.id   %}"><span class="glyphicon glyphicon-trash">Delete</span></a>
+          </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+{% endblock content %}

@@ -1,0 +1,53 @@
+{% extends 'student/studentbase.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap4/css/bootstrap.min.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h4 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+  </style>
+</head>
+<br><br>
+<div class="container ">
+  <div class="panel panel-primary">
+    <div class="panel-heading ">
+      <h4 class="panel-title">Available Courses</h4>
+    </div>
+    <table class="table table-hover table-bordered" id="dev-table">
+      <thead>
+        <tr>
+
+          <th >Exam Name</th>
+          
+          <th >Action</th>
+        </tr>
+      </thead>
+      {% for t in courses %}
+      <tr>
+
+        <td> {{t.course_name}}</td>
+        
+        <td><a class="btn btn-success btn-sm" style="border-radius:0px;" href="{% url 'take_exam' t.id  %}"><span class="glyphicon glyphicon-check"></span> Attend Exam</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+{% endblock content %}

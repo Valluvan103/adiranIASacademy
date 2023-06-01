@@ -1,0 +1,60 @@
+
+label{
+	font-size: 20px;
+}
+
+fieldset{
+	height: 1850px;
+	width: 50%;
+	background-color:mintcream;
+	margin-top: 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	justify-content: center;
+	position: absolute;
+	left: 25%;
+	
+}
+a{
+	font-size: 20px;
+}
+
+h1{
+	height: 100px;
+	padding-top: 20px;
+	border-radius: 10px;
+	font-size: 50px;
+	font-family:cursive;
+	width: 100%;
+
+
+}
+
+tr{
+	width: 700px;
+}
+table{
+	margin-top: 10px;
+}
+.btn{
+	margin-top: 20px;
+	margin-right:100px ;
+}
+td{
+	width: 700px;
+	font-size: 20px;
+	font-family: arial;
+}
+input{
+	margin-left: 30px;
+	margin-right:20px ;
+}
+
+.pagination{
+	
+	justify-content: center;
+}
+
+.pagination.page-item{
+
+}
